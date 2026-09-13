@@ -1,0 +1,184 @@
+/* estilos.css — o mínimo para a tela ficar legível.
+   O objetivo da aula é integração, não design. */
+
+:root {
+  --navy: #003366;
+  --gold: #f2a900;
+  --texto: #2c3e50;
+  --apagado: #5d6d7e;
+  --borda: #e3e8ee;
+  --fundo: #f7f9fb;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--fundo);
+  color: var(--texto);
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+
+main {
+  max-width: 60rem;
+  margin: 0 auto;
+  padding: 2rem 1rem 4rem;
+}
+
+h1 {
+  margin: 0;
+  color: var(--navy);
+}
+
+.subtitulo {
+  margin: 0.25rem 0 2rem;
+  color: var(--apagado);
+}
+
+.formulario {
+  background: #fff;
+  border: 1px solid var(--borda);
+  border-radius: 6px;
+  padding: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+.formulario h2 {
+  margin: 0 0 1rem;
+  font-size: 1.1rem;
+}
+
+.campos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(11rem, 1fr));
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  font-size: 0.85rem;
+  color: var(--apagado);
+}
+
+input {
+  padding: 0.5rem;
+  border: 1px solid var(--borda);
+  border-radius: 4px;
+  font: inherit;
+  color: var(--texto);
+}
+
+button {
+  background: var(--navy);
+  color: #fff;
+  border: 0;
+  border-radius: 4px;
+  padding: 0.55rem 1.1rem;
+  font: inherit;
+  cursor: pointer;
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: progress;
+}
+
+.lista {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 1rem;
+}
+
+.card {
+  display: flex;
+  gap: 1rem;
+  background: #fff;
+  border: 1px solid var(--borda);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.cartaz {
+  width: 9rem;
+  height: 9rem;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.cartaz.vazio {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--fundo);
+  color: var(--apagado);
+  font-size: 0.8rem;
+}
+
+.conteudo {
+  padding: 1rem 1rem 1rem 0;
+}
+
+.conteudo h2 {
+  margin: 0 0 0.35rem;
+  font-size: 1.05rem;
+}
+
+.meta {
+  margin: 0.15rem 0;
+  color: var(--apagado);
+  font-size: 0.9rem;
+}
+
+.upload {
+  margin-top: 0.75rem;
+}
+
+.botao-arquivo {
+  display: inline-block;
+  border: 1px solid var(--navy);
+  color: var(--navy);
+  border-radius: 4px;
+  padding: 0.3rem 0.7rem;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+
+.botao-arquivo input {
+  display: none;
+}
+
+.aviso {
+  background: #fff;
+  border: 1px solid var(--borda);
+  border-left: 4px solid var(--gold);
+  border-radius: 4px;
+  padding: 1rem;
+}
+
+.aviso.erro {
+  border-left-color: #e74c3c;
+}
+
+.dica {
+  color: var(--apagado);
+  font-size: 0.85rem;
+}
+
+.erro-inline {
+  color: #c0392b;
+  font-size: 0.85rem;
+  margin: 0.5rem 0 0;
+}
+
+code {
+  background: var(--fundo);
+  padding: 0.1rem 0.3rem;
+  border-radius: 3px;
+}
